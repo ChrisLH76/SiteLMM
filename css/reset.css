@@ -1,0 +1,27 @@
+:root {
+  /*Colors*/
+  --main-purple: #8536e6;
+  --medium-purple: #cea9fc;
+  --light-purple: #f2e8ff;
+  --main-green: #108d86;
+  --medium-green: #79cdc8;
+  --light-green: #ccf8eb;
+  --main-yellow: #ffcc00;
+  --medium-yellow: #fff78b;
+  --light-yellow: #fffcd6;
+  --main-red: #ff723c;
+  --medium-red: #ff9970;
+  --light-red: #ffd6c6;
+}
+
+* {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-yellow);
+  min-width: 100vh;
+}
