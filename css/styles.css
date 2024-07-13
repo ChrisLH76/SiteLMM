@@ -1,3 +1,129 @@
 @import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("./css/LatoCssClasses.css");
+
+header {
+  padding-top: 80px;
+  height: 100dvh;
+}
+header::after {
+  content: "";
+  position: fixed;
+  height: 2px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+  background-color: var(--main-purple);
+  animation: widthup 3s;
+}
+
+.header-logo {
+  position: fixed;
+  height: 100px;
+  top: 0px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 4;
+  animation: slideopacity 2s;
+}
+
+.navbar-container {
+  position: fixed;
+  width: 80%;
+  height: 90px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--light-yellow);
+  z-index: 3;
+}
+
+.navbar {
+  display: flex;
+  height: 90px;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+}
+.navbar li {
+  position: relative;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  animation: slideopacity 3s;
+}
+
+.navbar-links a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-red);
+  height: 2px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::before {
+  width: 100%;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--medium-red);
+  height: 2px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+@keyframes scaleup {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaledown {
+  from {
+    opacity: 0;
+    transform: scale(200);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideopacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes widthup {
+  from {
+    height: 4px;
+    width: 0;
+  }
+  to {
+    height: 2px;
+    width: 80%;
+  }
+}
