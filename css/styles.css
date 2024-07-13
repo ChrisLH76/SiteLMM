@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("./css/LatoCssClasses.css");
 
+html {
+  --navbar-height: 55px;
+}
+
 header {
   padding-top: 80px;
   height: 100dvh;
@@ -9,19 +13,19 @@ header {
 header::after {
   content: "";
   position: fixed;
-  height: 2px;
-  width: 80%;
+  height: 1px;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  top: 90px;
-  background-color: var(--main-purple);
+  top: var(--navbar-height);
+  background-color: var(--medium-purple);
   animation: widthup 3s;
 }
 
 .header-logo {
   position: fixed;
-  height: 100px;
-  top: 0px;
+  height: 200px;
+  top: -36px;
   right: 50%;
   transform: translateX(50%);
   z-index: 4;
@@ -30,23 +34,22 @@ header::after {
 
 .navbar-container {
   position: fixed;
-  width: 80%;
-  height: 90px;
+  width: 100%;
+  height: var(--navbar-height);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--light-yellow);
+  background-color: var(--light-purple);
   z-index: 3;
 }
 
 .navbar {
   display: flex;
-  height: 90px;
+  height: var(--navbar-height);
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
   font-size: 14px;
-  color: black;
 }
 .navbar li {
   position: relative;
@@ -54,6 +57,10 @@ header::after {
   padding-bottom: 3px;
   text-transform: uppercase;
   animation: slideopacity 3s;
+}
+
+.navbar a {
+  color: black;
 }
 
 .navbar-links a::before {
@@ -77,7 +84,7 @@ header::after {
   bottom: 0;
   right: 0;
   background-color: var(--medium-red);
-  height: 2px;
+  height: 1px;
   width: 0%;
   transition: width 0.3s;
 }
@@ -119,11 +126,11 @@ header::after {
 
 @keyframes widthup {
   from {
-    height: 4px;
+    height: 1px;
     width: 0;
   }
   to {
-    height: 2px;
-    width: 80%;
+    height: 1px;
+    width: 100%;
   }
 }
