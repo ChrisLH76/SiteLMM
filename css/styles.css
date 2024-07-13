@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("./css/LatoCssClasses.css");
+
+:root {
+  /*Colors*/
+  --main-purple: #8536e6;
+  --medium-purple: #cea9fc;
+  --light-purple: #f2e8ff;
+  --main-green: #108d86;
+  --medium-green: #79cdc8;
+  --light-green: #ccf8eb;
+  --main-yellow: #ffcc00;
+  --medium-yellow: #fff78b;
+  --light-yellow: #fffcd6;
+  --main-red: #ff723c;
+  --medium-red: #ff9970;
+  --light-red: #ffd6c6;
+}
+
+* {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-yellow);
+  min-width: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo-start-container {
+  position: relative;
+  /* border: 1px solid blue; */
+  width: 700px;
+  height: 603px;
+}
+
+.logo-start {
+  z-index: 1;
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 5;
+  stroke-dasharray: 9550;
+  stroke-dashoffset: 9550;
+  animation: animate-logo 5s linear forwards;
+}
+
+@keyframes animate-logo {
+  0% {
+    stroke-dashoffset: 9550;
+  }
+
+  25% {
+    stroke-dashoffset: 7155;
+  }
+
+  50% {
+    stroke-dashoffset: 4770;
+  }
+
+  75% {
+    stroke-dashoffset: 2385;
+  }
+
+  95% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+
+  100% {
+    fill: black;
+    /* stroke-width: 5; */
+  }
+}
+
+.logo-start-container p {
+  justify-content: center;
+  position: absolute;
+  /* color: var(--main-purple); */
+  letter-spacing: 3.4px;
+  font-weight: 300;
+  animation: appearanceOfLetters 8s;
+}
+
+.aison {
+  color: var(--main-red);
+  font-size: 105px;
+  left: 170px;
+  top: 148px;
+}
+
+.adeleine {
+  color: var(--main-yellow);
+  font-size: 105px;
+  left: 275px;
+  top: 295px;
+}
+
+#slogan {
+  font-size: 40px;
+  left: 275px;
+  top: 490px;
+  text-align: right;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 40px;
+  color: var(--main-purple);
+}
+
+@keyframes appearanceOfLetters {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
