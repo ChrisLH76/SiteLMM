@@ -12,7 +12,7 @@ header {
   transition: 0.3ms;
 }
 
-header::after {
+/* header::after {
   content: "";
   position: fixed;
   height: 1px;
@@ -22,7 +22,7 @@ header::after {
   top: var(--navbar-height);
   background-color: var(--medium-purple);
   animation: widthup 3s;
-}
+} */
 
 .header-logo {
   position: fixed;
