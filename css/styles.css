@@ -6,6 +6,10 @@
   --navbar-height: 55px;
 }
 
+* {
+  transition: 0.6s ease;
+}
+
 header {
   padding-top: 80px;
   height: 200vh;
