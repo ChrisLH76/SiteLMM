@@ -30,12 +30,11 @@ header {
 
 .header-logo {
   position: fixed;
-  height: 200px;
-  top: -36px;
-  right: 50%;
+  height: 100px;
+  top: -10px;
+  left: -20px;
   transform: translateX(50%);
-  z-index: 4;
-  animation: slideopacity 2s;
+  z-index: 1;
 }
 
 .navbar-container {
@@ -47,6 +46,7 @@ header {
   transform: translateX(-50%);
   background-color: var(--light-purple);
   z-index: 3;
+  border: inset 1px lightgray;
 }
 
 .navbar {
@@ -56,6 +56,7 @@ header {
   justify-content: space-around;
   align-items: center;
   font-size: 14px;
+  width: 50%;
 }
 .navbar li {
   position: relative;
